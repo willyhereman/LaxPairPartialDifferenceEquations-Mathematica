@@ -1,0 +1,147 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5129,        139]
+NotebookOptionsPosition[      4469,        111]
+NotebookOutlinePosition[      4836,        127]
+CellTagsIndexPosition[      4793,        124]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+SetDirectory establishes the current working directory.  The software and \
+notebook should be placed in that directory. Then, create a subdirectory of \
+it, which should be called sampleLattices, and put the sample lattices in \
+that subdirectory.\
+\>", "Text",
+ CellChangeTimes->{{3.7069776839690943`*^9, 3.7069777482997417`*^9}, {
+  3.7210472490668955`*^9, 3.7210472566389065`*^9}, {3.721047649340459*^9, 
+  3.721047753784606*^9}, {3.7210477918796597`*^9, 3.72104779935067*^9}, {
+  3.7210481924922237`*^9, 3.7210482251862693`*^9}, {3.7210482579013157`*^9, 
+  3.721048274813339*^9}, {3.723088119879514*^9, 3.723088144733549*^9}},
+ Background->GrayLevel[0.85]],
+
+Cell[BoxData["Quit"], "Input",
+ CellChangeTimes->{{3.7072499131979556`*^9, 3.7072499137979565`*^9}},
+ ExpressionUUID -> "2c32b475-7080-4835-bac6-ffa9ad5689d6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  RowBox[{"NotebookDirectory", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.695058515446208*^9, 3.6950585165415688`*^9}, {
+   3.699135589364644*^9, 3.6991355947806*^9}, 3.7194542783361454`*^9},
+ ExpressionUUID -> "c0013d61-eb1e-48c1-a3d5-7bdc0a5bdf3f"],
+
+Cell[BoxData["\<\"C:\\\\data\\\\bridgman\\\\software-06-21-2017\\\\onweb-11-\
+30-2017\"\>"], "Output",
+ CellChangeTimes->{3.723088174607591*^9, 3.723088526435087*^9}]
+}, Open  ]],
+
+Cell["Load the current Lax pair system software.", "Text",
+ CellChangeTimes->{{3.7069776839690943`*^9, 3.7069777482997417`*^9}, {
+  3.706977778387228*^9, 3.7069777941559134`*^9}},
+ Background->GrayLevel[0.85]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<LPSystemsPartialDifferenceEqsV2.m\>\"", "]"}], 
+  " "}]], "Input",
+ CellChangeTimes->{{3.707338160873082*^9, 3.707338173025099*^9}, {
+  3.7073387369738927`*^9, 3.7073387422949004`*^9}, {3.7188538521744223`*^9, 
+  3.718853866846443*^9}, {3.7209159973004303`*^9, 3.72091599741043*^9}, {
+  3.721047230133869*^9, 3.7210472361848774`*^9}},
+ ExpressionUUID -> "9d95e869-83f1-4924-bf91-9f42147ac32a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"LaxPairSystemsPartialDifferenceEquations v2 Successfully \
+Loaded.\"\>", "\[InvisibleSpace]", 
+   TemplateBox[{RowBox[{"\"Sun 24 Dec 2017\""}],RowBox[{"DateObject", "[", 
+       RowBox[{"{", 
+         RowBox[{"2017", ",", "12", ",", "24"}], "}"}], "]"}]},
+    "DateObject",
+    Editable->False]}],
+  SequenceForm[
+  "LaxPairSystemsPartialDifferenceEquations v2 Successfully Loaded.", 
+   DateObject[{2017, 12, 24}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.723088179418598*^9, 3.7230885271250877`*^9}],
+
+Cell[BoxData["\<\"The package was LAST UPDATED by Hereman on December 24, \
+2017 at 00:20 (12:20am).\"\>"], "Print",
+ CellChangeTimes->{3.723088179418598*^9, 3.723088527135088*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"LaxPairSolverUI", "[", 
+   RowBox[{
+   "\"\<c:\\\\data\\\\Bridgman\\\\Software-06-21-2017\\\\\>\"", ",", " ", 
+    RowBox[{"userInterfaceDebugFlag", "\[Rule]", "False"}]}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6864391415537367`*^9, 3.68643915516959*^9}, {
+   3.686589660315687*^9, 3.686589664601886*^9}, 3.686590149881695*^9, 
+   3.688142374254264*^9, 3.688828137506871*^9, 3.689379428530637*^9, 
+   3.694783619539817*^9, {3.694783663897442*^9, 3.694783665577355*^9}, {
+   3.6948040670981407`*^9, 3.69480408289634*^9}, 3.695062785056685*^9, 
+   3.695064511841423*^9, {3.695085092609334*^9, 3.695085093570078*^9}, {
+   3.697594136926916*^9, 3.697594139887958*^9}, {3.706976723596415*^9, 
+   3.706976728876832*^9}, {3.706978176519434*^9, 3.70697818272276*^9}, {
+   3.706979739132543*^9, 3.706979739972488*^9}, 3.706979773430331*^9, {
+   3.7072475131995764`*^9, 3.707247534921607*^9}, {3.7124260804380417`*^9, 
+   3.7124260805298567`*^9}, {3.718853953397565*^9, 3.718853953567565*^9}},
+ ExpressionUUID -> "972d080a-1d66-4b59-b7c8-a30c30fa7016"]
+},
+WindowSize->{1350, 670},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification->1.25,
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 671, 11, 83, "Text"],
+Cell[1232, 33, 159, 2, 37, "Input"],
+Cell[CellGroupData[{
+Cell[1416, 39, 303, 5, 37, "Input"],
+Cell[1722, 46, 166, 2, 37, "Output"]
+}, Open  ]],
+Cell[1903, 51, 209, 3, 58, "Text"],
+Cell[CellGroupData[{
+Cell[2137, 58, 444, 8, 37, "Input"],
+Cell[CellGroupData[{
+Cell[2606, 70, 561, 13, 41, "Print"],
+Cell[3170, 85, 180, 2, 28, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[3377, 91, 1088, 18, 37, "Input"]
+}
+]
+*)
+
